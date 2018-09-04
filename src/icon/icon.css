@@ -1,0 +1,199 @@
+.glyphicon-inverse {
+    color: #ffffff;
+}
+
+/* Stacked Copied from FontAwesome */
+
+/*
+  <h3>Stack fa-stack fa-stack-2x fa-stack-1x</h3>
+  <div>
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-square-o fa-stack-2x"></i>
+      <i class="fa fa-twitter fa-stack-1x"></i>
+    </span> fa-twitter on fa-square-o
+    <br/>
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+    </span> fa-flag on fa-circle
+    <br/>
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-square fa-stack-2x"></i>
+      <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+    </span> fa-terminal on fa-square
+    <br/>
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-camera fa-stack-1x"></i>
+      <i class="fa fa-ban fa-stack-2x text-danger"></i>
+    </span> fa-ban on fa-camera
+  </div>
+ */
+/* GlyphIcon
+<span class="glyphicon-stack">
+    <i class="glyphicon glyphicon-circle glyphicon-stack-2x green"></i>
+    <i class="glyphicon glyphicon-plus glyphicon-stack glyphicon-stack-1x white"></i>
+</span>
+
+<span class="glyphicon-stack">
+    <i class="glyphicon glyphicon-circle glyphicon-stack-2x green"></i>
+    <i class="glyphicon glyphicon-minus glyphicon-stack glyphicon-stack-1x white"></i>
+</span>
+
+<span class="glyphicon-stack">
+    <i class="glyphicon glyphicon-circle glyphicon-stack-2x black"></i>
+    <i class="glyphicon glyphicon-chevron-right glyphicon-stack glyphicon-stack-1x white"></i>
+</span>
+
+<span class="glyphicon-stack">
+    <i class="glyphicon glyphicon-circle glyphicon-stack-2x black"></i>
+    <i class="glyphicon glyphicon-chevron-left glyphicon-stack glyphicon-stack-1x white"></i>
+</span>
+*/
+.glyphicon-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+.glyphicon-circle {
+    position: relative;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    padding-top: 100%;
+    background: black;
+}
+
+.glyphicon-stack-1x {
+    line-height: inherit;
+}
+
+.glyphicon-stack-1x,
+.glyphicon-stack-2x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Size Copied from FontAwesome */
+/* makes the font 33% larger relative to the icon container */
+.glyphicon-lg {
+    font-size: 1.33333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+}
+
+.glyphicon-2x {
+    font-size: 2em;
+}
+
+.glyphicon-3x {
+    font-size: 3em;
+}
+
+.glyphicon-4x {
+    font-size: 4em;
+}
+
+.glyphicon-5x {
+    font-size: 5em;
+}
+
+.glyphicon-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+.glyphicon-spin {
+    -webkit-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@-o-keyframes spin {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(359deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+.glyphicon-rotate-90 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.glyphicon-rotate-180 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.glyphicon-rotate-270 {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.glyphicon-flip-horizontal {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+    -webkit-transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+.glyphicon-flip-vertical {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+    -webkit-transform: scale(1, -1);
+    -moz-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    -o-transform: scale(1, -1);
+    transform: scale(1, -1);
+}

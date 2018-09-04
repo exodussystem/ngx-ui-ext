@@ -1,0 +1,83 @@
+th.col-sort {
+    cursor: pointer;
+    position: relative !important;
+    background-clip: padding-box;
+    font-family: inherit;
+}
+th.col-sort.col-sort-left {
+    padding-left: 20px;
+}
+th.col-sort.col-sort-right {
+    padding-right: 20px;
+}
+th.col-sort.col-sort-right:after,
+th.col-sort.col-sort-left:before {
+    display:inline-block;
+    line-height: inherit;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+th.col-sort.col-sort-right.col-sort-default:after,
+th.col-sort.col-sort-left.col-sort-default:before {
+    opacity: 0.6;
+}
+th.col-sort.col-sort-right:after {
+    padding-right: 2px;
+    right: 5px;
+}
+th.col-sort.col-sort-left:before {
+    padding-left: 2px;
+    left: 5px;
+}
+
+th.font-type-glyphicon.col-sort.col-sort-right.col-sort-asc:after,
+th.font-type-glyphicon.col-sort.col-sort-left.col-sort-asc:before {
+    /* Bootstrap GlyphIcon */
+    font-family:"Glyphicons Halflings";
+    /*content:"\e155";      // glyphicon-sort-by-attributes*/
+    content: "\e253";       /* glyphicon-triangle-top */
+}
+th.col-sort.col-sort-right.col-sort-asc:after,
+th.col-sort.col-sort-left.col-sort-asc:before,
+th.font-type-fa.col-sort.col-sort-right.col-sort-asc:after,
+th.font-type-fa.col-sort.col-sort-left.col-sort-asc:before {
+    /* FontAwesome - fa-sort-asc/ fa-sort-up */
+    content:"\f0de";
+    font-family:"FontAwesome";
+}
+th.font-type-glyphicon.col-sort.col-sort-right.col-sort-desc:after,
+th.font-type-glyphicon.col-sort.col-sort-left.col-sort-desc:before {
+    /* Bootstrap GlyphIcon  */
+    /*content:"\e156";        glyphicon-sort-by-attributes-alt*/
+    content: "\e252";       /* glyphicon-triangle-bottom*/
+    font-family:"Glyphicons Halflings";
+}
+th.col-sort.col-sort-right.col-sort-desc:after,
+th.col-sort.col-sort-left.col-sort-desc:before,
+th.font-type-fa.col-sort.col-sort-right.col-sort-desc:after,
+th.font-type-fa.col-sort.col-sort-left.col-sort-desc:before {
+    /* FontAwesome - fa-sort-desc/ fa-sort-down */
+    content: "\f0dd";
+    font-family: "FontAwesome";
+}
+
+th.font-type-glyphicon.col-sort.col-sort-right.col-sort-default:after,
+th.font-type-glyphicon.col-sort.col-sort-left.col-sort-default:before {
+    /* Bootstrap GlyphIcon */
+    font-family:"Glyphicons Halflings";
+    content:"";             /* empty*/
+    /*content:"\e150";          glyphicon-sort*/
+}
+th.col-sort.col-sort-right.col-sort-default:after,
+th.col-sort.col-sort-left.col-sort-default:before,
+th.font-type-fa.col-sort.col-sort-right.col-sort-default:after,
+th.font-type-fa.col-sort.col-sort-left.col-sort-default:before {
+    /* FontAwesome - fa-unsorted/ fa-sort */
+    font-family:"FontAwesome";
+    content:"\f0dc";
+}

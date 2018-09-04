@@ -1,0 +1,202 @@
+.ui-datetime-container {
+    min-width: 200px;
+    line-height: 2em;
+    text-align: center;
+    vertical-align: middle
+}
+
+.ui-datetime-dates {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.ui-datetime-date {
+    cursor: pointer;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 33%;
+}
+
+/*
+.ui-datetime-date.month-of-year,
+.ui-datetime-date.year-of-decade,
+.ui-datetime-date.decade-of-century {
+    flex-basis: 33%;
+}
+*/
+
+.ui-datetime-date.day-of-month {
+    flex-basis: 14%;
+}
+
+.ui-datetime-date.active,
+.ui-datetime-date:focus,
+.ui-datetime-date:hover {
+    background: #eee;
+    border-radius: 4px;
+}
+
+.ui-datetime-date.selected {
+    background-color: #286090;
+    border-color: #204d74;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.ui-datetime-date-period.disabled,
+.ui-datetime-time-period.disabled,
+.ui-datetime-date.disabled {
+    color: #ccc;
+    cursor: not-allowed !important;
+}
+
+:not([class*="selected"]):not([class*="disabled"]).today,
+:not([class*="selected"]):not([class*="disabled"]).today:hover {
+    background-color: #fde19a;
+    background-image: -moz-linear-gradient(to bottom, #fdd49a, #fdf59a);
+    background-image: -ms-linear-gradient(to bottom, #fdd49a, #fdf59a);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fdd49a), to(#fdf59a));
+    background-image: -webkit-linear-gradient(to bottom, #fdd49a, #fdf59a);
+    background-image: -o-linear-gradient(to bottom, #fdd49a, #fdf59a);
+    background-image: linear-gradient(to bottom, #fdd49a, #fdf59a);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdd49a', endColorstr='#fdf59a', GradientType=0);
+    border-radius: 4px;
+    border-color: #fdf59a #fdf59a #fbed50;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    color: #000;
+}
+
+.days-of-week {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    /*background-color: #cccccc;*/
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch
+}
+
+.day-of-week {
+    font-weight: 700;
+    flex-grow: 1;
+    flex-shrink: 1
+}
+
+.days-of-week.disabled .day-of-week {
+    color: #ccc;
+}
+
+/* DateTime selector panel */
+
+.ui-datetime-panel {
+    display: flex;
+    overflow: hidden;
+    min-width: 160px;
+    max-width: 15em;
+    /*margin-top: 1em;*/
+    /*padding: 1em;*/
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center
+}
+
+/* Time scroller */
+
+ui-time-scroller .ui-datetime-container {
+    line-height: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center
+}
+
+.ui-datetime-time-period {
+    cursor: pointer;
+}
+
+.ui-datetime-time-period:hover {
+    background: #eee;
+    border-radius: 4px;
+}
+
+/* period switcher */
+
+ui-period-switch > .ui-datetime-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center
+}
+
+.ui-datetime-date-period {
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-bottom: 4px;
+}
+
+/* Timestamp selector panel */
+
+ui-timestamp-selector > .ui-datetime-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 2em;
+}
+
+/* navigation button that change the date and time */
+
+.ui-datetime-control {
+    cursor: pointer;
+    display: inline-block;
+    /*padding: .5em;*/
+    padding: 5px;
+    background-size: contain
+}
+
+.ui-datetime-control.disabled {
+    color: #ccc;
+    cursor: not-allowed !important;
+}
+
+ui-period-switch .ui-datetime-control {
+    /*padding: .5em;*/
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.ui-datetime-date-period:hover,
+.ui-datetime-control:not([class*="arrow-"]):hover {
+    background: #eee;
+    border-radius: 4px;
+}
+
+.ui-datetime-control.arrow-up {
+    background: no-repeat url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNjgzIDEzMzFsLTE2NiAxNjVxLTE5IDE5LTQ1IDE5dC00NS0xOWwtNTMxLTUzMS01MzEgNTMxcS0xOSAxOS00NSAxOXQtNDUtMTlsLTE2Ni0xNjVxLTE5LTE5LTE5LTQ1LjV0MTktNDUuNWw3NDItNzQxcTE5LTE5IDQ1LTE5dDQ1IDE5bDc0MiA3NDFxMTkgMTkgMTkgNDUuNXQtMTkgNDUuNXoiLz48L3N2Zz4=)
+}
+
+.ui-datetime-control.arrow-down {
+    background: no-repeat url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNjgzIDgwOGwtNzQyIDc0MXEtMTkgMTktNDUgMTl0LTQ1LTE5bC03NDItNzQxcS0xOS0xOS0xOS00NS41dDE5LTQ1LjVsMTY2LTE2NXExOS0xOSA0NS0xOXQ0NSAxOWw1MzEgNTMxIDUzMS01MzFxMTktMTkgNDUtMTl0NDUgMTlsMTY2IDE2NXExOSAxOSAxOSA0NS41dC0xOSA0NS41eiIvPjwvc3ZnPg==)
+}
+
+.ui-datetime-control.arrow-left {
+    background: no-repeat url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xNDI3IDMwMWwtNTMxIDUzMSA1MzEgNTMxcTE5IDE5IDE5IDQ1dC0xOSA0NWwtMTY2IDE2NnEtMTkgMTktNDUgMTl0LTQ1LTE5bC03NDItNzQycS0xOS0xOS0xOS00NXQxOS00NWw3NDItNzQycTE5LTE5IDQ1LTE5dDQ1IDE5bDE2NiAxNjZxMTkgMTkgMTkgNDV0LTE5IDQ1eiIvPjwvc3ZnPg==)
+}
+
+.ui-datetime-control.arrow-right {
+    background: no-repeat url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTc5MiIgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xMzYzIDg3N2wtNzQyIDc0MnEtMTkgMTktNDUgMTl0LTQ1LTE5bC0xNjYtMTY2cS0xOS0xOS0xOS00NXQxOS00NWw1MzEtNTMxLTUzMS01MzFxLTE5LTE5LTE5LTQ1dDE5LTQ1bDE2Ni0xNjZxMTktMTkgNDUtMTl0NDUgMTlsNzQyIDc0MnExOSAxOSAxOSA0NXQtMTkgNDV6Ii8+PC9zdmc+)
+}

@@ -1,0 +1,16 @@
+.*
+**/*.md
+**/package.json
+**/webpack.config.js
+**/webpack.example.js
+**/tsconfig.json
+**/tsconfig.typedoc.json
+**/typedoc.json
+**/node_modules
+src
+example
+build
+doc
+docs
+# un-ignore source in bundles
+!bundles/src
